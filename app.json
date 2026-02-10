@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Sunrise Alarm",
+    "slug": "sunrise-alarm-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a2e"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sunrisealarm.app",
+      "infoPlist": {
+        "UIBackgroundModes": ["audio", "processing"],
+        "NSMicrophoneUsageDescription": "This app does not use the microphone."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a2e"
+      },
+      "package": "com.sunrisealarm.app",
+      "permissions": [
+        "FLASHLIGHT",
+        "CAMERA",
+        "VIBRATE",
+        "WAKE_LOCK",
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ffffff",
+          "sounds": ["./assets/sounds/birds.mp3", "./assets/sounds/ocean.mp3", "./assets/sounds/rain.mp3"]
+        }
+      ],
+      "expo-av"
+    ]
+  }
+}
